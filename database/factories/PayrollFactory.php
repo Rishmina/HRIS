@@ -1,0 +1,22 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Payroll;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class PayrollFactory extends Factory
+{
+    protected $model = Payroll::class;
+
+    public function definition(): array
+    {
+        return [
+            'basic_salary' => 50000,
+            'allowances' => 0,
+            'deductions' => 0,
+            'bonus' => 0,
+            'pay_date' => $this->faker->date(),
+        ];
+    }
+}
